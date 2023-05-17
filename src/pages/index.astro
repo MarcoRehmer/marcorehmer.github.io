@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MainHeader from '../components/MainHeader.astro';
+import '../styles/global.scss'
+import Projects from '../components/Projects.astro';
+import RecentBlogPosts from '../components/RecentBlogPosts.astro';
+import MainSkills from '../components/MainSkills.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Welcome to Astro.">
+    <div class="flex flex-col justify-between h-screen">
+        <main class="mb-auto">
+            <MainHeader/>
+            <h1 class="text-3xl">Startseite Headline 1</h1>
+            <Hero/>
+            <h2 class="text-2xl">Timeline</h2>
+            <h2 class="text-2xl">Skill Tree</h2>
+            <MainSkills/>
+            <h2 class="text-2xl">Projekte</h2>
+            <Projects/>
+            <h2 class="text-2xl">Blog</h2>
+            <RecentBlogPosts/>
+        </main>
+        <footer>
+            here comes text
+        </footer>
+    </div>
+</Layout>

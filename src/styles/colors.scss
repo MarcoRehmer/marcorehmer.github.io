@@ -1,0 +1,11 @@
+
+:root {
+  //--color-font-headline: #fdf0d5;
+  //--color-font: #fff;
+  //--color-accent: #c1121f;
+  //--color-background: rgb(15 23 42);
+}
+
+.color--primary {
+  @apply bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent
+}
