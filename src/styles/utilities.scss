@@ -1,0 +1,24 @@
+$directions: ('left', 'right', 'top', 'bottom');
+
+$lengths: (
+        0rem: '0',
+        0.5rem: '0-5',
+        1rem: '1',
+        1.5rem: '1-5',
+        2rem: '2',
+);
+
+@each $direction in $directions {
+  @each $length, $appendix in $lengths {
+    .m-#{$direction}-#{$appendix} {
+      margin-#{$direction}: $length !important;
+    }
+    .p-#{$direction}-#{$appendix} {
+      padding-#{$direction}: $length !important;
+    }
+  }
+}
+
+.block {
+  display: block;
+}

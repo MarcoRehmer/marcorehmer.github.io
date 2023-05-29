@@ -1,29 +1,65 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import MainHeader from '../components/MainHeader.astro';
-import '../styles/global.scss'
-import Projects from '../components/Projects.astro';
-import RecentBlogPosts from '../components/RecentBlogPosts.astro';
-import MainSkills from '../components/MainSkills.astro';
-import Hero from '../components/Hero.astro';
+import Layout from "../layouts/Layout.astro";
+import MainHeader from "../components/MainHeader.astro";
+import "../styles/global.scss";
+import MainSkills from "../components/MainSkills.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+import Timeline from "../components/Timeline.astro";
+import LatestProjects from "../components/LatestProjects.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-    <div class="flex flex-col justify-between h-screen">
-        <main class="mb-auto">
-            <MainHeader/>
-            <h1 class="text-3xl">Startseite Headline 1</h1>
-            <Hero/>
-            <h2 class="text-2xl">Timeline</h2>
-            <h2 class="text-2xl">Skill Tree</h2>
-            <MainSkills/>
-            <h2 class="text-2xl">Projekte</h2>
-            <Projects/>
-            <h2 class="text-2xl">Blog</h2>
-            <RecentBlogPosts/>
-        </main>
-        <footer>
-            here comes text
-        </footer>
+<Layout title="Welcome to my Portfolio.">
+  <MainHeader />
+  <div class="root-layout">
+    <div class="main-content">
+      <main>
+        <div>
+          <div class="m-bottom-2">
+            <h1 style="margin-bottom: 0;">Hi, ich bin Marco</h1>
+            <span class="m-bottom-1"
+              >Frontend Developer. Junior Web Architect. Purist.</span
+            >
+            <Hero />
+          </div>
+          <div class="m-bottom-2">
+            <h2>Timeline</h2>
+            <Timeline />
+          </div>
+          <div class="m-bottom-2">
+            <h2>Main Skills</h2>
+            <MainSkills />
+            <button type="button" class="btn btn-outline-primary m-top-1"
+              >Skill Tree
+            </button>
+          </div>
+          <div class="m-bottom-2">
+            <h2>Aktuelle Projekte</h2>
+            <LatestProjects />
+            <!--<ProjectDetails />-->
+            <button type="button" class="btn btn-outline-primary m-top-1"
+              >Alle Projekte
+            </button>
+          </div>
+          <!--<h2>Aktuelle Blog-Beiträge</h2>-->
+          <!--<RecentBlogPosts />-->
+          <!--<button>zum Blog</button>-->
+        </div>
+      </main>
     </div>
+    <Footer />
+  </div>
 </Layout>
+
+<style>
+  .main-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .root-layout {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+</style>

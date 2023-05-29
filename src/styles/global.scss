@@ -1,11 +1,13 @@
 @import "colors";
+@import "utilities";
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-font);
 }
-
 code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
   Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
 }
