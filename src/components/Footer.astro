@@ -1,9 +1,22 @@
-<footer></footer>
+<footer>
+  <div class="footer__content">
+    <span>© 2023 Marco Rehmer</span>
+    <span>Build with <a href="https://astro.build">Astro</a>.</span>
+  </div>
+</footer>
 
 <style>
-  footer {
-    height: 100px;
-    background-color: #eee;
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer:before {
+    background-color: gray;
+    display: block;
+    height: 1px;
+    content: "";
     width: 100%;
+    margin-bottom: 0.5rem;
   }
 </style>

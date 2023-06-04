@@ -4,5 +4,5 @@ import {defineConfig} from 'astro/config';
 export default defineConfig({
     integrations: [],
     experimental: {assets: true},
-    base: '/marco-rehmer'
+    site: 'https://marcorehmer.github.io',
 });

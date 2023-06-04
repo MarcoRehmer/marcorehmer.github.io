@@ -9,42 +9,37 @@ import Timeline from "../components/Timeline.astro";
 import LatestProjects from "../components/LatestProjects.astro";
 ---
 
-<Layout title="Welcome to my Portfolio.">
-  <MainHeader />
+<Layout title="Marco Rehmer | Frontend Developer">
   <div class="root-layout">
     <div class="main-content">
-      <main>
+      <MainHeader />
+      <main class="m-top-2">
+
         <div>
-          <div class="m-bottom-2">
-            <h1 style="margin-bottom: 0;">Hi, ich bin Marco</h1>
-            <span class="m-bottom-1"
-              >Frontend Developer. Junior Web Architect. Purist.</span
-            >
-            <Hero />
-          </div>
-          <div class="m-bottom-2">
-            <h2>Timeline</h2>
-            <Timeline />
-          </div>
-          <div class="m-bottom-2">
-            <h2>Main Skills</h2>
-            <MainSkills />
-            <button type="button" class="btn btn-outline-primary m-top-1"
-              >Skill Tree
-            </button>
-          </div>
-          <div class="m-bottom-2">
-            <h2>Aktuelle Projekte</h2>
-            <LatestProjects />
-            <!--<ProjectDetails />-->
-            <button type="button" class="btn btn-outline-primary m-top-1"
-              >Alle Projekte
-            </button>
-          </div>
-          <!--<h2>Aktuelle Blog-Beiträge</h2>-->
-          <!--<RecentBlogPosts />-->
-          <!--<button>zum Blog</button>-->
+          <Hero/>
         </div>
+        <!--<div class="m-bottom-2">-->
+        <!--  <h2>Timeline</h2>-->
+        <!--  &lt;!&ndash;<Timeline />&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="m-bottom-2">-->
+        <!--  <h2>Main Skills</h2>-->
+        <!--  &lt;!&ndash;<MainSkills />&ndash;&gt;-->
+        <!--  <button type="button" class="btn btn-outline-primary m-top-1"-->
+        <!--    >Skill Tree-->
+        <!--  </button>-->
+        <!--</div>-->
+        <!--<div class="m-bottom-2">-->
+        <!--  <h2>Aktuelle Projekte</h2>-->
+        <!--  &lt;!&ndash;<LatestProjects />&ndash;&gt;-->
+        <!--  &lt;!&ndash;<ProjectDetails />&ndash;&gt;-->
+        <!--  <button type="button" class="btn btn-outline-primary m-top-1"-->
+        <!--    >Alle Projekte-->
+        <!--  </button>-->
+        <!--</div>-->
+        <!--<h2>Aktuelle Blog-Beiträge</h2>-->
+        <!--<RecentBlogPosts />-->
+        <!--<button>zum Blog</button>-->
       </main>
     </div>
     <Footer />
@@ -52,14 +47,21 @@ import LatestProjects from "../components/LatestProjects.astro";
 </Layout>
 
 <style>
-  .main-content {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
   .root-layout {
+    max-width: 900px;
+    margin: 4rem auto 0 auto;
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
   }
 </style>

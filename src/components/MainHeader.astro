@@ -1,31 +1,60 @@
-<nav class="navbar sticky-top navbar-light bg-light">
-  <a class="navbar-brand" href="/">Marco Rehmer</a>
+<a href="/" class="logo">
+  <span class="logo__text">Marco Rehmer</span>
+</a>
 
-  <button type="button" class="btn btn-outline-primary"
-    >CV <i class="fa-solid fa-download"></i></button
-  >
+<div class="nav-wrapper">
+  <nav class="navigation">
+    <a href="#">Blog</a>
+    <a href="#">Skills</a>
+    <a href="#">Projekte</a>
+    <a href="#">About</a>
+  </nav>
 
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link active" href="/projects">Projekte</a>
-    </li>
-    <!--<li class="nav-item">-->
-    <!--  <a class="nav-link" href="#">Timeline</a>-->
-    <!--</li>-->
-    <li class="nav-item">
-      <a class="nav-link" href="/skills">Skills</a>
-    </li>
-    <!--<li class="nav-item">-->
-    <!--  <a class="nav-link" href="#">Blog</a>-->
-    <!--</li>-->
-    <li class="nav-item">
-      <a class="nav-link" href="/about">About</a>
-    </li>
-  </ul>
-</nav>
+  <div class="social-buttons">
+    <a href="#">CV <i class="fa-regular fa-file-pdf"></i></a>
+    <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
+  </div>
+</div>
 
 <style>
-  .navbar-brand {
-    flex-grow: 1;
+  .logo {
+    display: inline-flex;
+  }
+
+  .logo__text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .logo__text:after {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    width: 25%;
+    height: 6px;
+    display: block;
+    background-color: #4b6cc1;
+    border-radius: 100px;
+    content: "";
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .navigation {
+    display: flex;
+    column-gap: 2rem;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+  }
+
+  .social-buttons {
+    display: flex;
+    column-gap: 1.5rem;
+    font-size: 1.5rem;
   }
 </style>
