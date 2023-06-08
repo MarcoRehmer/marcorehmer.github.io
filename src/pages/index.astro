@@ -1,27 +1,37 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import MainHeader from "../components/MainHeader.astro";
-import "../styles/global.scss";
-import MainSkills from "../components/MainSkills.astro";
+
 import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
-import Timeline from "../components/Timeline.astro";
-import LatestProjects from "../components/LatestProjects.astro";
+import MainSkills from "../components/MainSkills.astro";
 ---
 
 <Layout title="Marco Rehmer | Frontend Developer">
   <div class="root-layout">
     <div class="main-content">
+      <div style="padding: 0 1rem;">
       <MainHeader />
-      <main class="m-top-2">
-
-        <div>
-          <Hero/>
         </div>
-        <!--<div class="m-bottom-2">-->
-        <!--  <h2>Timeline</h2>-->
-        <!--  &lt;!&ndash;<Timeline />&ndash;&gt;-->
-        <!--</div>-->
+      <main>
+        <div style="min-height: 54vh">
+          <Hero />
+        </div>
+
+        <h2>Wer bin ich?</h2>
+        <p class="personal-description">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua.
+        </p>
+
+        <div class="m-top-2">
+          <MainSkills />
+        </div>
         <!--<div class="m-bottom-2">-->
         <!--  <h2>Main Skills</h2>-->
         <!--  &lt;!&ndash;<MainSkills />&ndash;&gt;-->
@@ -49,7 +59,7 @@ import LatestProjects from "../components/LatestProjects.astro";
 <style>
   .root-layout {
     max-width: 900px;
-    margin: 4rem auto 0 auto;
+    margin: 4rem auto 1rem auto;
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
@@ -60,8 +70,14 @@ import LatestProjects from "../components/LatestProjects.astro";
   }
 
   main {
+    margin-top: 80px;
+  }
+
+  .scroll-hint {
     display: flex;
     flex-direction: column;
-    row-gap: 2rem;
+    align-items: center;
+    font-size: 1.25rem;
+    color: gray;
   }
 </style>

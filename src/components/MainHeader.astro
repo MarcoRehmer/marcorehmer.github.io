@@ -4,15 +4,17 @@
 
 <div class="nav-wrapper">
   <nav class="navigation">
-    <a href="#">Blog</a>
-    <a href="#">Skills</a>
-    <a href="#">Projekte</a>
-    <a href="#">About</a>
+    <!--<a href="#">Blog</a>-->
+    <a href="/timeline">Timeline</a>
+    <a href="/projects">Projekte</a>
+    <a href="/about">About</a>
   </nav>
 
   <div class="social-buttons">
-    <a href="#">CV <i class="fa-regular fa-file-pdf"></i></a>
-    <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
+    <a href="#">CV <i class="fa-regular fa-file-pdf cv-button"></i></a>
+    <a href="https://github.com/marcorehmer"
+      ><i class="fa-brands fa-github"></i></a
+    >
   </div>
 </div>
 
@@ -22,6 +24,7 @@
   }
 
   .logo__text {
+    color: #191a1d;
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -52,9 +55,22 @@
     flex-wrap: wrap;
   }
 
+  .navigation a {
+    color: #5e5e5e;
+    letter-spacing: 0.2rem;
+  }
+
   .social-buttons {
     display: flex;
     column-gap: 1.5rem;
     font-size: 1.5rem;
+  }
+
+  .social-buttons a {
+    color: var(--navigation);
+  }
+
+  .cv-button {
+    color: var(--primary);
   }
 </style>

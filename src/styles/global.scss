@@ -2,7 +2,10 @@
 @import "utilities";
 
 body {
+  font-family: 'Poppins', sans-serif;
+  color: #191a1d;
 }
+
 code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
   Bitstream Vera Sans Mono, Courier New, monospace;
@@ -10,4 +13,11 @@ code {
 
 h1, h2, h3 {
   margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  color: var(--link-hover) !important;
 }
