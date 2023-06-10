@@ -1,83 +1,51 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MainHeader from "../components/MainHeader.astro";
-
 import Hero from "../components/Hero.astro";
-import Footer from "../components/Footer.astro";
 import MainSkills from "../components/MainSkills.astro";
 ---
 
 <Layout title="Marco Rehmer | Frontend Developer">
-  <div class="root-layout">
-    <div class="main-content">
-      <div style="padding: 0 1rem;">
-      <MainHeader />
-        </div>
-      <main>
-        <div style="min-height: 54vh">
-          <Hero />
-        </div>
-
-        <h2>Wer bin ich?</h2>
-        <p class="personal-description">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua.
-        </p>
-
-        <div class="m-top-2">
-          <MainSkills />
-        </div>
-        <!--<div class="m-bottom-2">-->
-        <!--  <h2>Main Skills</h2>-->
-        <!--  &lt;!&ndash;<MainSkills />&ndash;&gt;-->
-        <!--  <button type="button" class="btn btn-outline-primary m-top-1"-->
-        <!--    >Skill Tree-->
-        <!--  </button>-->
-        <!--</div>-->
-        <!--<div class="m-bottom-2">-->
-        <!--  <h2>Aktuelle Projekte</h2>-->
-        <!--  &lt;!&ndash;<LatestProjects />&ndash;&gt;-->
-        <!--  &lt;!&ndash;<ProjectDetails />&ndash;&gt;-->
-        <!--  <button type="button" class="btn btn-outline-primary m-top-1"-->
-        <!--    >Alle Projekte-->
-        <!--  </button>-->
-        <!--</div>-->
-        <!--<h2>Aktuelle Blog-Beiträge</h2>-->
-        <!--<RecentBlogPosts />-->
-        <!--<button>zum Blog</button>-->
-      </main>
+  <main>
+    <div class="hero-block">
+      <Hero />
     </div>
-    <Footer />
-  </div>
+
+    <h2>Wer bin ich?</h2>
+    <div class="personal-description">
+      <p>
+        Hi, ich heiße Marco und komme aus Berlin. Mein Fokus liegt in der
+        Web-Entwicklung mit Frameworks wie <b>Angular, React oder Svelte</b>.
+      </p>
+      <p>
+        Da sich unsere Welt immer mehr auf dem Smartphone abspielt, tauche ich
+        auch immer wieder gern in Frameworks und Sprachen wie <b
+          >Ionic, Flutter oder Xamarin</b
+        > ab.
+      </p>
+      <p>
+        Ein Frontend Developer darf nicht an der UI halt machen, sondern muss
+        auch das ganze System kennen und verstehen. Deshalb gehört für mich ein
+        fundamentales Wissen über <b>Software-Architektur</b> dazu.
+      </p>
+    </div>
+
+    <h2 style="margin-top: 80px;">Meine Fähigkeiten</h2>
+    <div>
+      <MainSkills />
+    </div>
+  </main>
 </Layout>
 
 <style>
-  .root-layout {
-    max-width: 900px;
-    margin: 4rem auto 1rem auto;
+  .hero-block {
+    min-height: 70vh;
     display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
-  }
-
-  .main-content {
-    width: 100%;
-  }
-
-  main {
-    margin-top: 80px;
-  }
-
-  .scroll-hint {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+  }
+
+  .personal-description {
     font-size: 1.25rem;
-    color: gray;
+    color: var(--text-color);
+    font-weight: 300;
   }
 </style>
