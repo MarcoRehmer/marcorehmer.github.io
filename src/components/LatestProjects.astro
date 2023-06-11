@@ -1,15 +1,33 @@
 ---
 interface Project {
   title: string;
+  slug: string;
   imageUrl: string;
+  imageAltText: string;
   tags: ReadonlyArray<string>;
 }
 
 const projects: ReadonlyArray<Project> = [
   {
-    title: "foo",
-    imageUrl: "#",
-    tags: [],
+    title: "Portfolio",
+    slug: "portfolio",
+    imageUrl: "/assets/images/me.jpg",
+    imaegAltText: "Placeholder Image",
+    tags: ["Astro", "Typescript"],
+  },
+  {
+    title: "Clockmate",
+    slug: "clockmate",
+    imageUrl: "/assets/images/me.jpg",
+    imaegAltText: "Placeholder Image",
+    tags: ["Svelte", "NestJS"],
+  },
+  {
+    title: "Squirrel News",
+    slug: "squirrel-news",
+    imageUrl: "/assets/images/me.jpg",
+    imaegAltText: "Placeholder Image",
+    tags: ["Ionic", "React"],
   },
 ];
 ---
@@ -17,19 +35,63 @@ const projects: ReadonlyArray<Project> = [
 <div class="container">
   <div class="row">
     {
-      projects.map((project) => {
-        return <div class="col-md-4 col-sm-12">
-          <div class="project-block" />
-        </div>;
-      })
+      projects.map((project) => (
+        <div class="col-md-4 col-sm-12">
+          <div class="project-block">
+            <a href={"/projects/" + project.slug}>
+              <h4>{project.title}</h4>
+              <img src={project.imageUrl} alt={project.imageAltText} />
+            </a>
+
+            <div class="tags-container">
+              {project.tags.map((tag) => (
+                <span>{tag}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))
     }
   </div>
 </div>
 
 <style>
   .project-block {
-    width: 250px;
-    height: 150px;
-    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 1.15rem;
+  }
+
+  .tags-container {
+    margin-top: 0.5rem;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+
+  .tags-container span {
+    background: var(--color-tag-background);
+    border-radius: 12px;
+    padding: 0 0.5rem;
+  }
+
+  img {
+    border-radius: 12px;
+    box-sizing: content-box;
+    width: 100%;
+  }
+
+  img:hover {
+    -o-transition: 0.25s;
+    -ms-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    box-shadow: 4px 4px 4px var(--color-shadow);
   }
 </style>
