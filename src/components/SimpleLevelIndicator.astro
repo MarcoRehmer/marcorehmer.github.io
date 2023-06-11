@@ -1,6 +1,18 @@
 ---
-const { level } = Astro.props;
+const maxLevel = 3;
+const {level} = Astro.props;
+
+const stars = Array.from({length: maxLevel}).map((_, index) => {
+    return index < level ? "fa-solid" : "fa-regular";
+});
 ---
 
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-<i class="fa-solid fa-star"></i>{level}
+{stars.map((star) => <i class:list={[star, "fa-star"]}/>)}
+
+<style>
+i {
+    color: var(--primary);
+    font-size: 1.15rem;
+    margin-right: 0.25rem;
+}
+</style>

@@ -64,7 +64,7 @@ function levelToStars(level: number): string {
       <h3>Sprachen</h3>
       <ul>
         {
-          frameworks.map((v) => (
+          languages.map((v) => (
             <li>
               <SimpleLevelIndicator level={v.level} />
               {v.title}
@@ -90,14 +90,22 @@ function levelToStars(level: number): string {
 </div>
 
 <style>
+  .container {
+    padding: 0;
+  }
+
   .skill-block {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 
-  .skill-block img {
-    width: 100px;
-    height: 100px;
+  ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  li {
+    font-size: 1.15rem;
   }
 </style>

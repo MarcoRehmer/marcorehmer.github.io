@@ -1,8 +1,26 @@
+---
+interface Project {
+  title: string;
+  imageUrl: string;
+  tags: ReadonlyArray<string>;
+}
+
+const projects: ReadonlyArray<Project> = [];
+---
+
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-sm-12"><div class="project-block"></div></div>
-    <div class="col-md-4 col-sm-12"><div class="project-block"></div></div>
-    <div class="col-md-4 col-sm-12"><div class="project-block"></div></div>
+
+
+    <div class="col-md-4 col-sm-12">
+      <div class="project-block"></div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="project-block"></div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="project-block"></div>
+    </div>
   </div>
 </div>
 

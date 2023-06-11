@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import MainSkills from "../components/MainSkills.astro";
+import LatestProjects from "../components/LatestProjects.astro";
 ---
 
 <Layout title="Marco Rehmer | Frontend Developer">
@@ -17,26 +18,35 @@ import MainSkills from "../components/MainSkills.astro";
         Web-Entwicklung mit Frameworks wie <b>Angular, React oder Svelte</b>.
       </p>
       <p>
-        Da sich unsere Welt immer mehr auf dem Smartphone abspielt, tauche ich
-        auch immer wieder gern in Frameworks und Sprachen wie <b
+        Neben klassischer Web Application Entwicklung tauche ich auch immer
+        wieder gern in Mobile Frameworks und Sprachen wie <b
           >Ionic, Flutter oder Xamarin</b
         > ab.
       </p>
       <p>
-        Ein Frontend Developer darf nicht an der UI halt machen, sondern muss
-        auch das ganze System kennen und verstehen. Deshalb gehört für mich ein
+        Da ich als Frontend Developer nicht an der UI halt mache, sondern das
+        ganze System kennen und verstehen will, gehört für mich ein
         fundamentales Wissen über <b>Software-Architektur</b> dazu.
       </p>
     </div>
 
-    <h2 style="margin-top: 80px;">Meine Fähigkeiten</h2>
+    <h2 class="headline-space">Meine Fähigkeiten</h2>
     <div>
       <MainSkills />
+    </div>
+
+    <h2 class="headline-space">Aktuelle Projekte</h2>
+    <div>
+      <LatestProjects />
     </div>
   </main>
 </Layout>
 
 <style>
+  .headline-space {
+    margin-top: 120px;
+  }
+
   .hero-block {
     min-height: 70vh;
     display: flex;
