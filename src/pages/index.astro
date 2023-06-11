@@ -15,18 +15,22 @@ import LatestProjects from "../components/LatestProjects.astro";
     <div class="personal-description">
       <p>
         Hi, ich heiße Marco und komme aus Berlin. Mein Fokus liegt in der
-        Web-Entwicklung mit Frameworks wie <b>Angular, React oder Svelte</b>.
+        Web-Entwicklung mit Frameworks wie <span class="highlight"
+          >Angular, React oder Svelte</span
+        >.
       </p>
       <p>
         Neben klassischer Web Application Entwicklung tauche ich auch immer
-        wieder gern in Mobile Frameworks und Sprachen wie <b
-          >Ionic, Flutter oder Xamarin</b
+        wieder gern in Mobile Frameworks und Sprachen wie <span
+          class="highlight">Ionic, Flutter oder Xamarin</span
         > ab.
       </p>
       <p>
         Da ich als Frontend Developer nicht an der UI halt mache, sondern das
         ganze System kennen und verstehen will, gehört für mich ein
-        fundamentales Wissen über <b>Software-Architektur</b> dazu.
+        fundamentales Wissen über <span class="highlight"
+          >Software-Architektur</span
+        > dazu.
       </p>
     </div>
 
@@ -42,7 +46,7 @@ import LatestProjects from "../components/LatestProjects.astro";
   </main>
 </Layout>
 
-<style>
+<style lang="scss">
   .headline-space {
     margin-top: 120px;
   }
@@ -61,5 +65,9 @@ import LatestProjects from "../components/LatestProjects.astro";
 
   main:last-child {
     margin-bottom: 2rem;
+  }
+
+  .highlight {
+    font-weight: bold;
   }
 </style>

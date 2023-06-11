@@ -1,14 +1,21 @@
 <footer>
   <div class="footer__content">
-    <span>© 2023 Marco Rehmer</span>
+    <span id="copyright">© 2023 Marco Rehmer</span>
     <span>Handcrafted with <a href="https://astro.build">Astro</a>.</span>
   </div>
 </footer>
 
-<style>
+<style lang="scss">
+  #copyright {
+    @media (min-width: 600px) {
+      flex-grow: 1;
+    }
+  }
+
   .footer__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   footer:before {

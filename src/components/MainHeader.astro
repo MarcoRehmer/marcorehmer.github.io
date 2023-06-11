@@ -4,7 +4,6 @@
 
 <div class="nav-wrapper">
   <nav class="navigation">
-    <!--<a href="#">Blog</a>-->
     <a href="/timeline">Timeline</a>
     <a href="/projects">Projekte</a>
     <a href="/about">About</a>
@@ -18,7 +17,7 @@
   </div>
 </div>
 
-<style>
+<style lang="scss">
   .logo {
     display: inline-flex;
   }
@@ -36,7 +35,7 @@
     width: 25%;
     height: 6px;
     display: block;
-    background-color: #4b6cc1;
+    background-color: var(--color-primary);
     border-radius: 100px;
     content: "";
   }
@@ -44,8 +43,13 @@
   .nav-wrapper {
     display: flex;
     justify-content: space-between;
-    font-size: 1.25rem;
+    font-size: 1rem;
     flex-wrap: wrap;
+    row-gap: 1rem;
+
+    @media (min-width: 600px) {
+      font-size: 1.25rem;
+    }
   }
 
   .navigation {
@@ -63,7 +67,11 @@
   .social-buttons {
     display: flex;
     column-gap: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+
+    @media (min-width: 600px) {
+      font-size: 1.5rem;
+    }
   }
 
   .social-buttons a {
