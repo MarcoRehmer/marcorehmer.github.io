@@ -5,22 +5,24 @@ interface Project {
   tags: ReadonlyArray<string>;
 }
 
-const projects: ReadonlyArray<Project> = [];
+const projects: ReadonlyArray<Project> = [
+  {
+    title: "foo",
+    imageUrl: "#",
+    tags: [],
+  },
+];
 ---
 
 <div class="container">
   <div class="row">
-
-
-    <div class="col-md-4 col-sm-12">
-      <div class="project-block"></div>
-    </div>
-    <div class="col-md-4 col-sm-12">
-      <div class="project-block"></div>
-    </div>
-    <div class="col-md-4 col-sm-12">
-      <div class="project-block"></div>
-    </div>
+    {
+      projects.map((project) => {
+        return <div class="col-md-4 col-sm-12">
+          <div class="project-block" />
+        </div>;
+      })
+    }
   </div>
 </div>
 
