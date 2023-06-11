@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import MainSkills from "../components/MainSkills.astro";
 import LatestProjects from "../components/LatestProjects.astro";
+import GetInTouch from "../components/GetInTouch.astro";
 ---
 
 <Layout title="Marco Rehmer | Frontend Developer">
@@ -43,6 +44,11 @@ import LatestProjects from "../components/LatestProjects.astro";
     <div>
       <LatestProjects />
     </div>
+
+    <h2 class="headline-space">Kontaktiere mich</h2>
+    <div>
+      <GetInTouch />
+      </div>
   </main>
 </Layout>
 
@@ -52,7 +58,7 @@ import LatestProjects from "../components/LatestProjects.astro";
   }
 
   .hero-block {
-    min-height: 70vh;
+    min-height: 64vh;
     display: flex;
     align-items: center;
   }

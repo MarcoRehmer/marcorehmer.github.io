@@ -4,6 +4,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #191a1d;
+  background: var(--color-background);
 }
 
 code {
@@ -36,5 +37,5 @@ a {
   color: var(--color-primary);
 }
 a:hover {
-  color: var(--color-accent) !important;
+  color: var(--color-primary-hover) !important;
 }
