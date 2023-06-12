@@ -39,3 +39,9 @@ a {
 a:hover {
   color: var(--color-primary-hover) !important;
 }
+
+p {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 300;
+}
