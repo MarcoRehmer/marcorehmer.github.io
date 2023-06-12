@@ -1,18 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MainHeader from "../components/MainHeader.astro";
 ---
 
 <Layout title="About">
   <main>
+    <h2>About Me</h2>
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <img src="/assets/images/me.jpg" alt="Placeholder Text" />
+          <img src="/assets/images/me_vertical.png" alt="Placeholder Text" />
         </div>
         <div class="col-md-6 col-sm-12">
           <h3>Darum bin ich Entwickler</h3>
-          <p>
+          <p class="last-paragraph">
             Seit mittlerweile 9 Jahren stecke ich meine Nase in Code und schiebe
             Pixel von A nach B. Ich liebe es, nur aus Buchstaben und
             Sonderzeichen Oberflächen entstehen zu lassen, die dem Nutzer Freude
@@ -21,28 +21,24 @@ import MainHeader from "../components/MainHeader.astro";
             geworden, die es mir ermöglicht, ein Leben lang zu lernen und
             niemals stehen bleiben zu müssen.
           </p>
+
+          <h3>Meine Erfahrungen</h3>
+          <p class="last-paragraph">Lorem Ipsum</p>
         </div>
       </div>
-    </div>
 
-    <h3>Meine Erfahrungen</h3>
-    <p>Lorem Ipsum</p>
+      <h3>Wo die Reise hingeht</h3>
+      <p class="last-paragraph">Lorem Ipsum</p>
 
-    <h3>Wo die Reise hingeht</h3>
-    <p></p>
-
-    <h3>Und wenn ich nicht an der Tastatur sitze...</h3>
-    <div class="row">
-      <p class="col-md-6 col-sm-12">
+      <h3>Und wenn ich nicht an der Tastatur sitze...</h3>
+      <p class="last-paragraph">
         …dann findet man mich bei einer guten Tasse Kaffee in einem Buch
         versunken im Park, oder hängend an einer Wand beim bouldern oder
         Seilklettern. Für mehr Offline-Zeit verbringe ich öfters Nächte im Wald
         oder genieße das Rauschen des Meeres.
       </p>
 
-      <div class="col-md-6 col-sm-12">
-        <img src="/assets/images/me.jpg" alt="Placeholder Text" />
-      </div>
+      <img src="/assets/images/me_horizontal.png" alt="Placeholder Text" />
     </div>
   </main>
 </Layout>
@@ -50,5 +46,14 @@ import MainHeader from "../components/MainHeader.astro";
 <style>
   img {
     max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .last-paragraph {
+    margin-bottom: 4rem;
   }
 </style>
