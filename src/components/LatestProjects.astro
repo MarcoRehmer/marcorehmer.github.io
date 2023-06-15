@@ -12,21 +12,21 @@ const projects: ReadonlyArray<Project> = [
     title: "Portfolio",
     slug: "portfolio",
     imageUrl: "/assets/images/project_portfolio_thumbnail.png",
-    imaegAltText: "Placeholder Image",
+    imageAltText: "Placeholder Image",
     tags: ["Astro", "Typescript"],
   },
   {
     title: "Clockmate",
     slug: "clockmate",
     imageUrl: "/assets/images/project_clockmate_thumbnail.png",
-    imaegAltText: "Placeholder Image",
+    imageAltText: "Placeholder Image",
     tags: ["Svelte", "NestJS"],
   },
   {
     title: "Squirrel News App",
     slug: "squirrel-news",
     imageUrl: "/assets/images/project_squirrelnews_thumbnail.png",
-    imaegAltText: "Placeholder Image",
+    imageAltText: "Placeholder Image",
     tags: ["Ionic", "React"],
   },
 ];
@@ -36,7 +36,7 @@ const projects: ReadonlyArray<Project> = [
   <div class="row">
     {
       projects.map((project) => (
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-6">
           <div class="project-block">
             <a href={"/projects/" + project.slug}>
               <h4>{project.title}</h4>
@@ -59,6 +59,7 @@ const projects: ReadonlyArray<Project> = [
   .row {
     row-gap: 2rem;
   }
+
   .project-block {
     display: flex;
     flex-direction: column;
@@ -71,10 +72,12 @@ const projects: ReadonlyArray<Project> = [
 
   .tags-container {
     margin-top: 0.5rem;
-    align-self: flex-end;
     display: flex;
     flex-direction: row;
-    column-gap: 1rem;
+    column-gap: 0.5rem;
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+    justify-content: flex-end;
   }
 
   .tags-container span {
