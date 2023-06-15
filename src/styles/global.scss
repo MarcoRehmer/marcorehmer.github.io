@@ -36,6 +36,7 @@ a {
   text-decoration: none !important;
   color: var(--color-primary);
 }
+
 a:hover {
   color: var(--color-primary-hover) !important;
 }
@@ -44,4 +45,8 @@ p {
   font-size: 1.25rem;
   color: var(--text-color);
   font-weight: 300;
+}
+
+.highlight {
+  font-weight: bold;
 }

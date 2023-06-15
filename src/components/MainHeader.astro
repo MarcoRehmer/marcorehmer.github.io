@@ -1,19 +1,34 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.split("/")[1];
+---
+
 <a href="/" class="logo">
   <span class="logo__text">Marco Rehmer</span>
 </a>
 
 <div class="nav-wrapper">
   <nav class="navigation">
-    <a href="/timeline">Timeline</a>
-    <a href="/projects">Projekte</a>
-    <a href="/about">About</a>
+    <a class={currentPath === "timeline" && "active"} href="/timeline"
+      >Timeline</a
+    >
+    <a class={currentPath === "projects" && "active"} href="/projects"
+      >Projekte</a
+    >
+    <a class={currentPath === "about" && "active"} href="/about">About</a>
   </nav>
 
   <div class="social-buttons">
-    <a href="#">CV <i class="fa-regular fa-file-pdf"></i></a>
+    <!-- <a href="#">CV <i class="fa-regular fa-file-pdf"></i></a>-->
     <a href="https://github.com/marcorehmer"
       ><i class="fa-brands fa-github"></i></a
     >
+    <a href="https://www.xing.com/profile/Marco_Rehmer017082/cv"
+      ><i class="fa-brands fa-xing"></i></a
+    >
+    <!--<a href="https://github.com/marcorehmer"-->
+    <!--  ><i class="fa-brands fa-linkedin"></i></a-->
+    <!--&gt;-->
   </div>
 </div>
 
@@ -62,6 +77,10 @@
   .navigation a {
     color: #5e5e5e;
     letter-spacing: 0.2rem;
+  }
+
+  .active {
+    color: var(--color-primary) !important;
   }
 
   .social-buttons {
