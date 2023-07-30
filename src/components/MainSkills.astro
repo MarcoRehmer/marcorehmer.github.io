@@ -19,10 +19,11 @@ const languages: ReadonlyArray<Skill> = [
     level: 2,
   },
   {
+    title: "Java",
+    level: 2,
+  },
+  {
     title: "Go",
-    level: 1,
-  },{
-    title: "Dart",
     level: 1,
   },
 ];
@@ -33,7 +34,7 @@ const frameworks: ReadonlyArray<Skill> = [
   },
   {
     title: "React",
-    level: 3,
+    level: 2,
   },
   {
     title: "Svelte",
@@ -47,9 +48,28 @@ const frameworks: ReadonlyArray<Skill> = [
     title: "NestJS",
     level: 2,
   },
+];
+
+const toolset: ReadonlyArray<Skill> = [
   {
-    title: "Flutter",
-    level: 1,
+    title: "Redux",
+    level: 3,
+  },
+  {
+    title: "Nx (Monorepo)",
+    level: 2,
+  },
+  {
+    title: "Jenkins",
+    level: 2,
+  },
+  {
+    title: "Cypress",
+    level: 2,
+  },
+  {
+    title: "Docker",
+    level: 2,
   },
 ];
 
@@ -63,7 +83,7 @@ function levelToStars(level: number): string {
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-4">
       <h3>Sprachen</h3>
       <ul>
         {
@@ -76,7 +96,7 @@ function levelToStars(level: number): string {
         }
       </ul>
     </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-4">
       <h3>Frameworks</h3>
       <ul>
         {
@@ -85,6 +105,19 @@ function levelToStars(level: number): string {
               <SimpleLevelIndicator level={v.level} />
               {v.title}
             </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <h3>Toolset</h3>
+      <ul>
+        {
+          toolset.map((v) => (
+              <li>
+                <SimpleLevelIndicator level={v.level} />
+                {v.title}
+              </li>
           ))
         }
       </ul>

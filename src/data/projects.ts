@@ -14,13 +14,13 @@ export const projects: ReadonlyArray<Project> = [
       imageAltText: "Placeholder Image",
       tags: ["Astro", "Typescript"],
     },
-    {
-      title: "Clockmate",
-      slug: "clockmate",
-      imageUrl: "/assets/images/project_clockmate_thumbnail.png",
-      imageAltText: "Placeholder Image",
-      tags: ["Svelte", "NestJS"],
-    },
+    // {
+    //   title: "Clockmate",
+    //   slug: "clockmate",
+    //   imageUrl: "/assets/images/project_clockmate_thumbnail.png",
+    //   imageAltText: "Placeholder Image",
+    //   tags: ["Svelte", "NestJS"],
+    // },
     {
       title: "Squirrel News App",
       slug: "squirrel-news",
