@@ -21,7 +21,7 @@ const {
 } = projects.find((p) => p.slug === project);
 ---
 
-<Layout title={project}>
+<Layout title={`Projekt | ${title}`}>
   <main>
     <h2>{title}</h2>
     <div class="container">
@@ -31,7 +31,9 @@ const {
         </div>
 
         <div class="col-md-6">
-          <p>{shortDescription}</p>
+          <p>
+            <Fragment set:html={shortDescription} />
+          </p>
 
           <h4>Tech Stack</h4>
           <div class="tags-container">
