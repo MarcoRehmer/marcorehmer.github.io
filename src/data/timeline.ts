@@ -10,25 +10,37 @@ interface TimelineGroup {
 
 export const timeline: ReadonlyArray<TimelineGroup> = [
     {
+        fromTo: "2023 - heute",
+        groupTitle: "Web Developer / Freelancer",
+        projects: [
+            // {
+            //     title:
+            //         "Burp Suite Certified Practitioner",
+            //     type: "education",
+            //     techs: ["Burp Suite", "Penetration Testing"],
+            // },
+            {
+                title:
+                    "Clockmate - Zeiterfassung für Einzelpersonen und kleinere Unternehmen",
+                type: "project",
+                techs: ["NextJS / React", "Go"],
+            },
+        ],
+    },
+    {
         fromTo: "2022 - heute",
         groupTitle: "Web Developer / Co-Team Lead (t2Informatik GmbH)",
         projects: [
             {
-                title:
-                    "Clockmate - Zeiterfassung für Einzelpersonen und kleinere Unternehmen",
-                type: "open-source",
-                techs: ["Svelte", "NestJS"],
-            },
-            {
                 title: "Squirrel News - Mobile News App zum lesen von kuratierten News",
                 type: "open-source",
-                techs: ["Ionic Framework", "React"],
+                techs: ["Ionic Framework", "React", "Firebase"],
             },
             {
                 title:
                     "Geleiteter Zuordnungs- und Verarbeitungsprozess von Akten und Antragsteller:innen im Asylverfahren",
                 type: "project",
-                techs: ["Typescript", "Angular"],
+                techs: ["Typescript", "Angular", "Nx"],
             },
             {
                 title: "Antworterhebung von konfigurierbaren Fragebögen",
