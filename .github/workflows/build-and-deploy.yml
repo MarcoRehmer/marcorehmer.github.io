@@ -27,5 +27,4 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: ./dist/marco-rehmer/browser
-          remoteDir: /
+          local-dir: ./dist/marco-rehmer/browser/
