@@ -3,6 +3,8 @@ import { Component, Input, OnInit } from "@angular/core";
 export interface TimelineSpan {
   yearFrom: string;
   yearTo?: string;
+  jobTitle: string;
+  content: string;
 }
 
 @Component({
@@ -13,4 +15,10 @@ export interface TimelineSpan {
 export class TimelineBlockComponent {
   @Input()
   timelineSpan?: TimelineSpan;
+
+  expanded: boolean = false;
+
+  toggleContent() {
+    this.expanded = !this.expanded;
+  }
 }

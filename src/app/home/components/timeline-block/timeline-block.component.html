@@ -1,6 +1,6 @@
 @if(timelineSpan){
 
-<div class="container">
+<div class="container" (click)="toggleContent()">
   <span class="year-range">
     <span class="year">{{ timelineSpan.yearFrom }} </span>
     <span>-</span>
@@ -12,4 +12,9 @@
   </span>
   <i class="fa-solid fa-chevron-down"></i>
 </div>
-}
+@if(expanded) {
+<div style="margin-bottom: 2rem; max-width: 750px">
+  <p class="job-title">{{ timelineSpan.jobTitle }}</p>
+  <p>{{ timelineSpan.content }}</p>
+</div>
+} }
