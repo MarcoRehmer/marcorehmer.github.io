@@ -1,0 +1,31 @@
+.container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    .year-range {
+      //   text-decoration: underline;
+      border-bottom: 2px solid var(--light);
+    }
+  }
+}
+
+.year {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.year-range {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  border-bottom: 2px solid var(--dark);
+}
+
+.highlight-now {
+  color: var(--cyan);
+}

@@ -1,0 +1,15 @@
+@if(timelineSpan){
+
+<div class="container">
+  <span class="year-range">
+    <span class="year">{{ timelineSpan.yearFrom }} </span>
+    <span>-</span>
+    <span
+      class="year"
+      [ngClass]="{ 'highlight-now': timelineSpan.yearTo === undefined }"
+      >{{ timelineSpan.yearTo || "now" }}</span
+    >
+  </span>
+  <i class="fa-solid fa-chevron-down"></i>
+</div>
+}
