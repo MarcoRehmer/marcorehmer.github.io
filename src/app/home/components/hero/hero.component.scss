@@ -1,12 +1,12 @@
-@import '../../../../breakpoints.scss';
-@import '../../../../utils.scss';
+@import "../../../../breakpoints.scss";
+@import "../../../../utils.scss";
 
 :host {
   @include blockViewPort();
   margin-top: 4rem;
 
-  @include breakpoint('m') {
-    margin-top: 8rem;
+  @include breakpoint("m") {
+    min-height: 60vh;
   }
 }
 
@@ -19,7 +19,7 @@
 .hero-name {
   font-size: 2rem;
 
-  @include breakpoint('s') {
+  @include breakpoint("s") {
     font-size: 3rem;
   }
 }
@@ -28,7 +28,7 @@
   font-size: 1.25rem;
   color: var(--purple);
 
-  @include breakpoint('s') {
+  @include breakpoint("s") {
     font-size: 2rem;
   }
 }
@@ -41,7 +41,7 @@
 .arrow-image {
   display: none;
 
-  @include breakpoint('m') {
+  @include breakpoint("m") {
     max-height: 250px;
     display: unset;
   }

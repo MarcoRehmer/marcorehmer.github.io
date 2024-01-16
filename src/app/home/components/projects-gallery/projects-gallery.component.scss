@@ -1,12 +1,20 @@
-@import '../../../../breakpoints.scss';
-@import '../../../../utils.scss';
+@import "../../../../breakpoints.scss";
+@import "../../../../utils.scss";
 
-.project-gallery {
+:host {
   @include blockViewPort();
 }
 
+.project-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
 .project-card {
-  width: 350px;
+  max-width: 350px;
 }
 
 img {

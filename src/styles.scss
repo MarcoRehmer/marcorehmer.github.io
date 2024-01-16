@@ -1,5 +1,5 @@
-@import '@fontsource/prompt';
-@import 'breakpoints.scss';
+@import "@fontsource/prompt";
+@import "breakpoints.scss";
 
 :root {
   --cyan: #1af9f3;
@@ -16,11 +16,17 @@ body {
   background-color: var(--dark);
   margin: auto;
   padding: 1rem 2rem;
-  font-family: 'prompt';
+  font-family: "prompt";
   max-width: 1200px;
 
-  @include breakpoint('s') {
+  @include breakpoint("s") {
     padding: 2rem 4rem;
+  }
+}
+
+p {
+  @include breakpoint("s") {
+    font-size: 1.25rem;
   }
 }
 

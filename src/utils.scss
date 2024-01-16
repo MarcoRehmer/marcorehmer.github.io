@@ -1,4 +1,4 @@
-@import 'breakpoints.scss';
+@import "breakpoints.scss";
 
 @mixin blockViewPort {
   min-height: 60vh;
@@ -6,8 +6,8 @@
   flex-direction: column;
   justify-content: center;
 
-  @include breakpoint('s') {
+  @include breakpoint("s") {
     margin-top: 8rem;
-    min-height: 40vh;
+    min-height: 20vh;
   }
 }
