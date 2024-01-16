@@ -1,0 +1,20 @@
+@import '../../../../breakpoints.scss';
+@import '../../../../utils.scss';
+
+.project-gallery {
+  @include blockViewPort();
+}
+
+.project-card {
+  width: 350px;
+}
+
+img {
+  width: 100%;
+
+  &:hover {
+    background-color: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}

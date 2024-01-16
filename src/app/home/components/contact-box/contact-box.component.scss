@@ -1,0 +1,16 @@
+@import '../../../../breakpoints.scss';
+
+:host {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inner-content {
+  margin: 0;
+
+  @include breakpoint('s') {
+    margin: 2rem;
+  }
+}

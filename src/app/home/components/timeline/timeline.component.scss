@@ -1,0 +1,13 @@
+@import '../../../../utils.scss';
+
+:host {
+  @include blockViewPort();
+}
+
+.timeline-blocks {
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+}

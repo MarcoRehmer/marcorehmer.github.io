@@ -1,0 +1,72 @@
+@import '../../../../breakpoints.scss';
+@import '../../../../utils.scss';
+
+:host {
+  @include blockViewPort();
+  margin-top: 4rem;
+
+  @include breakpoint('m') {
+    margin-top: 8rem;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.hero-name {
+  font-size: 2rem;
+
+  @include breakpoint('s') {
+    font-size: 3rem;
+  }
+}
+
+.hero-title {
+  font-size: 1.25rem;
+  color: var(--purple);
+
+  @include breakpoint('s') {
+    font-size: 2rem;
+  }
+}
+
+.hero-image {
+  border-radius: 50%;
+  height: 250px;
+}
+
+.arrow-image {
+  display: none;
+
+  @include breakpoint('m') {
+    max-height: 250px;
+    display: unset;
+  }
+
+  &.right {
+    rotate: 180deg;
+  }
+}
+
+.skill-badge {
+  &.cyan {
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 16px var(--cyan),
+      0 0 32px var(--cyan);
+  }
+
+  &.purple {
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 16px var(--pink),
+      0 0 32px var(--pink);
+  }
+}
+
+.skill-tree-button {
+  border: 1px solid var(--cyan);
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+}

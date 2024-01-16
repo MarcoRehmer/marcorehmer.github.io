@@ -1,0 +1,60 @@
+@import '@fontsource/prompt';
+@import 'breakpoints.scss';
+
+:root {
+  --cyan: #1af9f3;
+  --purple: #bc84f6;
+  --pink: #bc13fe;
+  --lila: #bc84f6;
+  --dark: #1d1d1d;
+  --light: white;
+  --gray: #707070;
+}
+
+body {
+  color: var(--light);
+  background-color: var(--dark);
+  margin: auto;
+  padding: 1rem 2rem;
+  font-family: 'prompt';
+  max-width: 1200px;
+
+  @include breakpoint('s') {
+    padding: 2rem 4rem;
+  }
+}
+
+a {
+  color: var(--light);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--purple);
+  }
+
+  &.active {
+    color: var(--purple);
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.neon-line {
+  border-top: 0.2rem solid #fff;
+
+  &.purple {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem var(--pink),
+      0 0 0.8rem var(--pink), 0 0 2.8rem var(--pink),
+      inset 0 0 1.3rem var(--pink);
+  }
+
+  &.cyan {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem var(--cyan),
+      0 0 0.8rem var(--cyan), 0 0 2.8rem var(--cyan),
+      inset 0 0 1.3rem var(--cyan);
+  }
+}
