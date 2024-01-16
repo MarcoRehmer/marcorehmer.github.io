@@ -19,6 +19,7 @@ import { TimelineComponent } from "./home/components/timeline/timeline.component
 import { ProjectsGalleryComponent } from "./home/components/projects-gallery/projects-gallery.component";
 import { ContactBoxComponent } from "./home/components/contact-box/contact-box.component";
 import { TimelineBlockComponent } from "./home/components/timeline-block/timeline-block.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -36,11 +37,21 @@ import { TimelineBlockComponent } from "./home/components/timeline-block/timelin
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     CommonModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
   ],
-  providers: [provideClientHydration(), provideHttpClient(withFetch())],
+  providers: [
+    provideClientHydration(),
+    provideHttpClient(withFetch()),
+    // provideAnimationsAsync(),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+function provideAnimationsAsync():
+  | import("@angular/core").Provider
+  | import("@angular/core").EnvironmentProviders {
+  throw new Error("Function not implemented.");
+}

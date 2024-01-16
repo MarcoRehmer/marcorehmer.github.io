@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-post',
-  templateUrl: 'post.component.html',
+  selector: "app-post",
+  templateUrl: "post.component.html",
 })
 export class PostComponent implements OnInit {
   @Input() id!: string;
@@ -10,6 +10,6 @@ export class PostComponent implements OnInit {
   post?: string = undefined;
   constructor() {}
   ngOnInit(): void {
-    this.post = `./assets/pages/projects/${this.id}.md`;
+    this.post = ``;
   }
 }

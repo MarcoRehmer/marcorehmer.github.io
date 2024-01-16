@@ -70,3 +70,22 @@
   border-radius: 25px;
   padding: 0.5rem 1rem;
 }
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  -webkit-animation: fadeAnimation ease 3s infinite;
+  -moz-animation: fadeAnimation ease 2s infinite;
+  -o-animation: fadeAnimation ease 2s infinite;
+  animation: fadeAnimation ease 2s infinite;
+}
