@@ -28,7 +28,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/marco-rehmer/browser/
-          server-dir: ./
+          server-dir: /
           protocol: ftps
           log-level: verbose
           timeout: 60000
