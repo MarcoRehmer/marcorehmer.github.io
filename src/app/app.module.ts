@@ -20,6 +20,8 @@ import { ProjectsGalleryComponent } from "./home/components/projects-gallery/pro
 import { ContactBoxComponent } from "./home/components/contact-box/contact-box.component";
 import { TimelineBlockComponent } from "./home/components/timeline-block/timeline-block.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ImprintComponent } from './imprint/imprint.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     ProjectsGalleryComponent,
     ContactBoxComponent,
     TimelineBlockComponent,
+    ImprintComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
