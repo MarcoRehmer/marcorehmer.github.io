@@ -20,8 +20,8 @@ import { ProjectsGalleryComponent } from "./home/components/projects-gallery/pro
 import { ContactBoxComponent } from "./home/components/contact-box/contact-box.component";
 import { TimelineBlockComponent } from "./home/components/timeline-block/timeline-block.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { ImprintComponent } from './imprint/imprint.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { ImprintComponent } from "./imprint/imprint.component";
+import { NotFoundComponent } from "./404/404.component";
 
 @NgModule({
   declarations: [
@@ -46,16 +46,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     CommonModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
   ],
-  providers: [
-    provideClientHydration(),
-    provideHttpClient(withFetch()),
-    // provideAnimationsAsync(),
-  ],
+  providers: [provideClientHydration(), provideHttpClient(withFetch())],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-function provideAnimationsAsync():
-  | import("@angular/core").Provider
-  | import("@angular/core").EnvironmentProviders {
-  throw new Error("Function not implemented.");
-}
