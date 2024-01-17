@@ -32,7 +32,7 @@ export class TimelineComponent {
         jobTitle: "Web Frontend Developer",
         content: `Entwicklung Monitoring App für Dialyse-Maschinen in Angular.
         Weiterentwicklung einer Konfigurator-App für Consulting-Nutzer zur
-        Angebotserstellung von Dialyse-Systemen`,
+        Angebotserstellung von Dialyse-Systemen Angebotserstellung von Dialyse-Systemen`,
       },
       {
         yearFrom: "2018",

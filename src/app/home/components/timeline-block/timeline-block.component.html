@@ -10,11 +10,16 @@
       >{{ timelineSpan.yearTo || "now" }}</span
     >
   </span>
-  <i class="fa-solid fa-chevron-down"></i>
+  <i
+    [@rotateUpDown]="open ? 'up' : 'down'"
+    class="fa-solid fa-chevron-down"
+  ></i>
 </div>
-@if(expanded) {
-<div style="margin-bottom: 2rem; max-width: 750px">
-  <p class="job-title">{{ timelineSpan.jobTitle }}</p>
-  <p>{{ timelineSpan.content }}</p>
+
+<div [@openClose]="open ? 'open' : 'closed'">
+  <div style="margin-bottom: 2rem; max-width: 750px">
+    <p class="job-title">{{ timelineSpan.jobTitle }}</p>
+    <p>{{ timelineSpan.content }}</p>
+  </div>
 </div>
-} }
+}
