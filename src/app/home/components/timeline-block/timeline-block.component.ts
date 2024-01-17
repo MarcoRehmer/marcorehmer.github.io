@@ -30,12 +30,12 @@ export interface TimelineSpan {
           opacity: "0",
         })
       ),
-      transition("* <=> *", [animate("0.2s 0s ease-out")]),
+      transition("* <=> *", [animate("300ms 0s ease-out")]),
     ]),
     trigger("rotateUpDown", [
       state("down", style({ rotate: "0" })),
       state("up", style({ rotate: "180deg" })),
-      transition("* => *", [animate("0.2s 0s ease-out")]),
+      transition("* <=> *", [animate("200ms 0s ease-out")]),
     ]),
   ],
 })
