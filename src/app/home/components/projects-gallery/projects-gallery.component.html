@@ -2,7 +2,10 @@
 <div class="project-gallery">
   @for(project of projects; track project) {
   <div class="project-card">
-    <img [src]="project.imageUrl" />
+    <img
+      [src]="project.imageUrl"
+      [attr.aria-label]="'Thumbnail Image für Projekt ' + project.title"
+    />
     <p class="project-title">{{ project.title }}</p>
     <p>
       {{ project.shortDescription }}

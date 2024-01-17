@@ -1,7 +1,8 @@
-@import '../../../../utils.scss';
+@import "../../../../utils.scss";
 
 :host {
   @include blockViewPort();
+  justify-content: start;
 }
 
 .timeline-blocks {
