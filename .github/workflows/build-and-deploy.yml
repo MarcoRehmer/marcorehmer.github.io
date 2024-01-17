@@ -32,3 +32,5 @@ jobs:
           protocol: ftps
           log-level: minimal
           timeout: 60000
+          exclude: |
+            .htaccess
